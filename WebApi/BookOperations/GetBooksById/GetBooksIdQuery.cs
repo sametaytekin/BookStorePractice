@@ -2,14 +2,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using WebApi.Common;
+using WebApi;
+using AutoMapper;
 
 namespace WebApi.BookOperations.GetBooksById
 {
     public class GetBooksById
     {
         private readonly BookStoreDbContext _dbContext;
-        public GetBooksById(BookStoreDbContext dbContext ){
-            _dbContext= dbContext;
+
+        private readonly IMapper _mapper;
+
+        public GetBooksById(BookStoreDbContext dbContext, IMapper mapper)
+        {
+            _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         public int BookId { get; set; }
@@ -21,12 +28,8 @@ namespace WebApi.BookOperations.GetBooksById
             {
                 throw new InvalidOperationException("Kitap Bulunamadı");
             }
-            BooksViewModelById bookById = new BooksViewModelById{
-                PageCount=book.PageCount,
-                PublishDate=book.PublishDate.Date.ToString("dd/MM/yyy"),
-                Genre= ((GenreEnum)book.GenreId).ToString(),
-                Title=book.Title
-            };
+            BooksViewModelById bookById = _mapper.Map<BooksViewModelById>(book);
+        
             
             return bookById;
 

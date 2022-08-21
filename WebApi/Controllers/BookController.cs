@@ -64,7 +64,7 @@ namespace WebApi.Controllers
             BooksViewModelById result;
             try
             {
-                GetBooksById query = new GetBooksById(_context);
+                GetBooksById query = new GetBooksById(_context,_mapper);
                 query.BookId=id;
                 result = query.Handle();                
             }
