@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using WebApi.Common;
 
 namespace WebApi.BookOperations.GetBooksById
@@ -11,13 +12,20 @@ namespace WebApi.BookOperations.GetBooksById
             _dbContext= dbContext;
         }
 
-        public BooksViewModelById Handle(int id){
-            var bookList = _dbContext.Books.Where(x=>x.Id == id ).SingleOrDefault();
+        public int BookId { get; set; }
+
+        public BooksViewModelById Handle(){
+            var book = _dbContext.Books.Where(x=>x.Id == BookId ).SingleOrDefault();
+
+            if (book is null)
+            {
+                throw new InvalidOperationException("Kitap Bulunamadı");
+            }
             BooksViewModelById bookById = new BooksViewModelById{
-                PageCount=bookList.PageCount,
-                PublishDate=bookList.PublishDate.Date.ToString("dd/MM/yyy"),
-                Genre= ((GenreEnum)bookList.GenreId).ToString(),
-                Title=bookList.Title
+                PageCount=book.PageCount,
+                PublishDate=book.PublishDate.Date.ToString("dd/MM/yyy"),
+                Genre= ((GenreEnum)book.GenreId).ToString(),
+                Title=book.Title
             };
             
             return bookById;
