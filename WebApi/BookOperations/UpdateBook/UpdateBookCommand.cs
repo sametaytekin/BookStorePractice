@@ -10,19 +10,20 @@ namespace WebApi.BookOperations.UpdateBook
             _dbContext= dbContext;
         }
 
+        public int BookId { get; set; }
+
         public BookUpdateViewModel Model { get; set; }
 
         public void Handle(){
-            var updatedBook = _dbContext.Books.SingleOrDefault(x=>x.Title ==  Model.Title);
+            var updatedBook = _dbContext.Books.SingleOrDefault(x=>x.Id == BookId);
 
             if( updatedBook is null){
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Kitap Bulunamadı");
             }
 
-            updatedBook.Title= updatedBook != default ? Model.Title : updatedBook.Title;
-            updatedBook.PageCount= updatedBook != default ? Model.PageCount : updatedBook.PageCount;
-            updatedBook.PublishDate= updatedBook != default ? Model.PublishDate : updatedBook.PublishDate;
-            updatedBook.GenreId= updatedBook.GenreId != default ? Model.GenreId : updatedBook.GenreId;
+            updatedBook.Title= Model.Title != default ? Model.Title : updatedBook.Title;
+
+            updatedBook.GenreId= Model.GenreId != default ? Model.GenreId : updatedBook.GenreId;
 
             _dbContext.SaveChanges();
         }
@@ -34,9 +35,6 @@ namespace WebApi.BookOperations.UpdateBook
         public string Title { get; set; }
 
         public int GenreId { get; set; }
-        public int PageCount { get; set; }
-
-        public DateTime PublishDate { get; set; }
         
     }
     

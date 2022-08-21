@@ -101,11 +101,13 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateBook([FromBody] BookUpdateViewModel updatedBook){
-            UpdateBookCommand command = new UpdateBookCommand(_context);
+        public IActionResult UpdateBook(int id,[FromBody] BookUpdateViewModel updatedBook){
 
             try
             {
+                UpdateBookCommand command = new UpdateBookCommand(_context);
+
+                command.BookId =id;
                 command.Model = updatedBook;
                 command.Handle();
             }
