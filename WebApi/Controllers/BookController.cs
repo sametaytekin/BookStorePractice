@@ -16,32 +16,7 @@ namespace WebApi.Controllers
     [ApiController]
     [Route("[controller]s")]
     public class BookController:ControllerBase{
-        // private static List<Book> BookList = new List<Book>(){
-        //     new Book{
-        //         Id=1,
-        //         Title="Lean Startup",
-        //         GenreId=1,  //Kişisel gelişim
-        //         PageCount=200,
-        //         PublishDate = new DateTime(2002,06,12)
 
-        //     },
-
-        //     new Book{
-        //         Id=2,
-        //         Title="İyi hissetmek",
-        //         GenreId=2,
-        //         PageCount=500,
-        //         PublishDate=new DateTime(2000,02,25)
-        //     },
-
-        //     new Book{
-        //         Id=3,
-        //         Title="Dune",
-        //         GenreId=5,
-        //         PageCount=520,
-        //         PublishDate=new DateTime(2001,05,15)
-        //     }
-        // };
 
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
@@ -54,7 +29,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         public IActionResult GetBooks(){
-            GetBooksQuery query = new GetBooksQuery(_context);
+            GetBooksQuery query = new GetBooksQuery(_context,_mapper);
             var result = query.Handle();
             return Ok(result);
         }

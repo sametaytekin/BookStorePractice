@@ -2,20 +2,25 @@ using System.Linq;
 using WebApi.DBOperations;
 using System.Collections.Generic;
 using WebApi.Common;
+using AutoMapper;
 
 namespace WebApi.BookOperations.GetBooks
 {
     public class GetBooksQuery
     {
         private readonly BookStoreDbContext _dbContext;
+        private readonly IMapper _mapper;
 
-        public GetBooksQuery(BookStoreDbContext dbContext){
+        public GetBooksQuery(BookStoreDbContext dbContext, IMapper mapper)
+        {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         public List<BooksViewModel> Handle(){
             var bookList = _dbContext.Books.OrderBy(x=>x.Id).ToList<Book>();
             List<BooksViewModel> viewModelBook = new List<BooksViewModel>();
+            viewModelBook = _mapper.Map<List<BooksViewModel>>(bookList);
 
             foreach (var book in bookList)
             {
