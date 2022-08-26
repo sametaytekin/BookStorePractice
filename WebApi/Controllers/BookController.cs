@@ -96,6 +96,8 @@ namespace WebApi.Controllers
 
                 command.BookId =id;
                 command.Model = updatedBook;
+                UpdateBookCommandValidator updateValidator = new UpdateBookCommandValidator();
+                updateValidator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch (Exception e)
