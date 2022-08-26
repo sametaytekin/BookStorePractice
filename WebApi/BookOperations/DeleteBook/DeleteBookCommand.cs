@@ -27,10 +27,6 @@ namespace WebApi.BookOperations.DeleteBook
 
     }
 
-    public class DeleteModel{
-
-    }
-
 
 
 }
