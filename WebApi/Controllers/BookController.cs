@@ -10,6 +10,8 @@ using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 using WebApi.BookOperations.UpdateBook;
 using WebApi.BookOperations.DeleteBook;
 using AutoMapper;
+using FluentValidation.Results;
+using FluentValidation;
 
 namespace WebApi.Controllers
 {
@@ -63,16 +65,20 @@ namespace WebApi.Controllers
         public IActionResult AddBook([FromBody] CreateBookModel newBook ){
             CreateBookCommand command = new CreateBookCommand(_context,_mapper);
 
-            try
-            {
-                command.Model = newBook;
-                command.Handle();
-            }
-            catch (InvalidOperationException e)
-            {
+        try
+        {
+            command.Model = newBook;
+            //Validation comes first
+            CreateBookCommandValidator addValidator = new CreateBookCommandValidator();
+            addValidator.ValidateAndThrow(command);                    
+
+            command.Handle();
+        }
+        catch (InvalidOperationException e)
+        {
                 
-                return BadRequest(e.Message);
-            }
+            return BadRequest(e.Message);
+        }
 
 
             return Ok(); 
