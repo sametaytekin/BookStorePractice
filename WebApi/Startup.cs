@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using WebApi.Middlewares;
 
 namespace WebApi
 {
@@ -55,6 +57,8 @@ namespace WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCustomExceptionMiddleware();
 
             app.UseEndpoints(endpoints =>
             {
