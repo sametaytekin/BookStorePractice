@@ -28,7 +28,7 @@ namespace WebApi.Application.GenreOperations.UpdateGenre
                 throw new InvalidOperationException("Aynı isimde zaten bir kitap türü mevcut");
             }
 
-            genre.Name= Model.Name.Trim() == default ? Model.Name : genre.Name;
+            genre.Name=string.IsNullOrEmpty( Model.Name.Trim()) ? genre.Name: Model.Name;
             genre.isActive=Model.isActive;
             _context.SaveChanges();
         }

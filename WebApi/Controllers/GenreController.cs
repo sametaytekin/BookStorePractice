@@ -67,6 +67,7 @@ namespace WebApi.Controllers
         {
             UpdateGenreCommand command = new UpdateGenreCommand(_context);
             command.GenreId=id;
+            command.Model=updateGenre;
 
             UpdateGenreCommandValidator validator = new UpdateGenreCommandValidator();
             validator.ValidateAndThrow(command);
