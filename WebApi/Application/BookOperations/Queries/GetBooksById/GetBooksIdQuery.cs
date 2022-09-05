@@ -4,6 +4,7 @@ using System;
 using WebApi.Common;
 using WebApi;
 using AutoMapper;
+using WebApi.DBOperations;
 
 namespace WebApi.Application.BookOperations.Queries.GetBooksById
 {

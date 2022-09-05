@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi.Entities;
 
-namespace WebApi
+namespace WebApi.DBOperations
 {
     public class BookStoreDbContext : DbContext{
         public BookStoreDbContext( DbContextOptions<BookStoreDbContext> options) : base(options)

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using AutoMapper;
+using WebApi.DBOperations;
 
 namespace WebApi.Application.GenreOperations.Queries.GetGenreDetail
 {

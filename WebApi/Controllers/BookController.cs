@@ -12,6 +12,7 @@ using WebApi.Application.BookOperations.Command.CreateBookCommandValidator;
 using WebApi.Application.BookOperations.DeleteBook;
 using WebApi.Application.BookOperations.Commands.CreateBookCommandValidator;
 using WebApi.Application.BookOperations.Commands.UpdateBook;
+using WebApi.DBOperations;
 
 namespace WebApi.Controllers
 {

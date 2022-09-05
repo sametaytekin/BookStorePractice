@@ -4,6 +4,7 @@ using WebApi.Application.BookOperations.Queries.GetBooksById;
 using WebApi.Entities;
 using static WebApi.Application.BookOperations.Commands.CreateBookCommand.CreateBookCommand;
 using WebApi.Application.GenreOperations.Queries.GetGenres;
+using WebApi.Application.GenreOperations.CreateGenre;
 
 namespace WebApi.Common
 {
@@ -20,6 +21,7 @@ namespace WebApi.Common
             .ForMember(dest => dest.Genre ,opt => opt.MapFrom(src =>( (GenreEnum)src.GenreId).ToString() ) );
 
             CreateMap<Genre,GenresViewModel>();
+            CreateMap<CreateGenreModel,Genre>();
 
 
         }

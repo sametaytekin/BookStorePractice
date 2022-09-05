@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using WebApi.DBOperations;
 
 namespace WebApi.Application.GenreOperations.Queries.GetGenres
 {
