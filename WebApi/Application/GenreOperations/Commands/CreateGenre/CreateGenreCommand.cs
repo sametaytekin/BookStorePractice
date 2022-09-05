@@ -14,9 +14,8 @@ namespace WebApi.Application.GenreOperations.CreateGenre
 
         public CreateGenreModel Model; 
 
-        public CreateGenreCommand(IMapper mapper, BookStoreDbContext context)
+        public CreateGenreCommand( BookStoreDbContext context)
         {
-            _mapper = mapper;
             _context = context;
         }
 
