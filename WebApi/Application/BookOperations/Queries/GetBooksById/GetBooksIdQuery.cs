@@ -5,6 +5,7 @@ using WebApi.Common;
 using WebApi;
 using AutoMapper;
 using WebApi.DBOperations;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApi.Application.BookOperations.Queries.GetBooksById
 {
@@ -23,7 +24,7 @@ namespace WebApi.Application.BookOperations.Queries.GetBooksById
         public int BookId { get; set; }
 
         public BooksViewModelById Handle(){
-            var book = _dbContext.Books.Where(x=>x.Id == BookId ).SingleOrDefault();
+            var book = _dbContext.Books.Include(entity => entity.Genre).Where(x=>x.Id == BookId ).SingleOrDefault();
 
             if (book is null)
             {
