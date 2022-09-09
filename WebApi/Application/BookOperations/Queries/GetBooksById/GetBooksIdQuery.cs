@@ -24,7 +24,7 @@ namespace WebApi.Application.BookOperations.Queries.GetBooksById
         public int BookId { get; set; }
 
         public BooksViewModelById Handle(){
-            var book = _dbContext.Books.Include(entity => entity.Genre).Where(x=>x.Id == BookId ).SingleOrDefault();
+            var book = _dbContext.Books.Include(entity => entity.Genre).Include(e=>e.Author).Where(x=>x.Id == BookId ).SingleOrDefault();
 
             if (book is null)
             {
@@ -48,7 +48,9 @@ namespace WebApi.Application.BookOperations.Queries.GetBooksById
 
         public string PublishDate { get; set; }
 
-        public string Genre { get; set; }        
+        public string Genre { get; set; }  
+
+        public string Author { get; set; }      
 
     }
 

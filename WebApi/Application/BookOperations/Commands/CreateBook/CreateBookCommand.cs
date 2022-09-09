@@ -50,6 +50,8 @@ namespace WebApi.Application.BookOperations.Commands.CreateBookCommand
 
             public DateTime PublishDate { get; set; }
 
+            public int AuthorId { get; set; }
+
 
         }
 

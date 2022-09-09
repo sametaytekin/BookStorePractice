@@ -21,7 +21,7 @@ namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
         public void Handle()
         {
             var deleteAuthor = _context.Authors.Include(entity=>entity.Books).SingleOrDefault(x=>x.Id==AuthorId);
-
+            
             if(deleteAuthor is null)
             {
                 throw new InvalidOperationException("Yazar bulunamadı");
