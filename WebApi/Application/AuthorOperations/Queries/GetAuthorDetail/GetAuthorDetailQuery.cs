@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 using WebApi.Entities;
 
@@ -20,7 +23,7 @@ namespace WebApi.Application.AuthorOperations.Queries.GetAuthorDetailQuery
 
         public GetAuthorDetailViewModel Handle()
         {
-            var author = _context.Authors.Where(x => x.Id == AuthorId).SingleOrDefault();
+            var author = _context.Authors.Include(e=>e.Books).Where(x => x.Id == AuthorId).SingleOrDefault();
             if(author is null)
             {
                 throw new InvalidOperationException("Yazar Bulunamadı");
@@ -36,8 +39,8 @@ namespace WebApi.Application.AuthorOperations.Queries.GetAuthorDetailQuery
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-
         public DateTime Birthday { get; set;}
+        public List<string> Books { get; set; }
         
     }
     
