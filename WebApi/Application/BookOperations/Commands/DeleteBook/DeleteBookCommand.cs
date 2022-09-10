@@ -5,9 +5,9 @@ using WebApi.DBOperations;
 namespace WebApi.Application.BookOperations.DeleteBook
 {
     public class DeleteBookCommand{
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
 
-        public DeleteBookCommand( BookStoreDbContext dbContext){
+        public DeleteBookCommand( IBookStoreDbContext dbContext){
             _dbContext = dbContext;
         }
 

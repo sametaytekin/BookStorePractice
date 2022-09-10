@@ -10,12 +10,12 @@ using WebApi.Entities;
 namespace WebApi.Application.BookOperations.Commands.CreateBookCommand
 {
     public class CreateBookCommand{
-       private readonly BookStoreDbContext _dbContext;
+       private readonly IBookStoreDbContext _dbContext;
        private readonly IMapper _mapper;
 
        public CreateBookModel Model { get; set; }
 
-        public CreateBookCommand( BookStoreDbContext context,IMapper mapper){
+        public CreateBookCommand( IBookStoreDbContext context,IMapper mapper){
             _dbContext = context;
             _mapper = mapper;
         }
