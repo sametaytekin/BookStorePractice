@@ -40,6 +40,7 @@ namespace WebApi
             });
             //InMemory Database kullanmak için gerekli
             services.AddDbContext<BookStoreDbContext>(options => options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
+            services.AddScoped<IBookStoreDbContext>(provider => provider.GetService<BookStoreDbContext>());
             //AutoMapper kullanmak için gerekli
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
