@@ -26,6 +26,8 @@ namespace WebApi.Application.BookOperations.Commands.UpdateBook
 
             updatedBook.GenreId= Model.GenreId != default ? Model.GenreId : updatedBook.GenreId;
 
+            updatedBook.AuthorId= Model.AuthorId != default ? Model.AuthorId : updatedBook.AuthorId;
+
             _dbContext.SaveChanges();
         }
 
