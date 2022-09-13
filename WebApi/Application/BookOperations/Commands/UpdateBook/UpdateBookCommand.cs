@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.BookOperations.Commands.UpdateBook
+namespace WebApi.BookOperations.UpdateBook
 {
     public class UpdateBookCommand
     {

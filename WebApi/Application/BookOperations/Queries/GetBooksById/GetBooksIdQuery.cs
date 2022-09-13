@@ -7,7 +7,7 @@ using AutoMapper;
 using WebApi.DBOperations;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApi.Application.BookOperations.Queries.GetBooksById
+namespace WebApi.BookOperations.GetBooksById
 {
     public class GetBooksById
     {

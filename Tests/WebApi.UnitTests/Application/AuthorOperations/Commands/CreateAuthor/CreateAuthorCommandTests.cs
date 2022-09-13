@@ -3,7 +3,7 @@ using System.Linq;
 using AutoMapper;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.AuthorOperations.Queries.CreateAuthor;
+using WebApi.AuthorOperations.CreateAuthor;
 using WebApi.DBOperations;
 using WebApi.Entities;
 using Xunit;

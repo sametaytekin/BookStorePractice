@@ -2,9 +2,9 @@ using System;
 using AutoMapper;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.GenreOperations.CreateGenre;
 using WebApi.DBOperations;
 using WebApi.Entities;
+using WebApi.GenreOperations.CreateGenre;
 using Xunit;
 
 namespace Application.GenreOperations.Commands

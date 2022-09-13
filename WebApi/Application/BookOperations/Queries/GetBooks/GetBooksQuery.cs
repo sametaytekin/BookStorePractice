@@ -6,7 +6,7 @@ using AutoMapper;
 using WebApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApi.Application.BookOperations.Queries.GetBooksQuery
+namespace WebApi.BookOperations.GetBooks
 {
     public class GetBooksQuery
     {

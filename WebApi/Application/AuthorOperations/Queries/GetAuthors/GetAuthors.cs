@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 using WebApi.Entities;
 
-namespace WebApi.Application.AuthorOperations.Queries.GetAuthors
+namespace WebApi.AuthorOperations.GetAuthors
 {
     public class GetAuthorsQuery
     {

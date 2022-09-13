@@ -1,6 +1,6 @@
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.GenreOperations.DeleteGenre;
+using WebApi.GenreOperations.DeleteGenre;
 using Xunit;
 
 namespace Application.GenreOperations.Commands

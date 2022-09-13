@@ -1,6 +1,6 @@
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
+using WebApi.GenreOperations.GetGenreDetail;
 using Xunit;
 
 namespace Application.GenreOperations.Queries

@@ -2,7 +2,7 @@ using System;
 using AutoMapper;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
+using WebApi.AuthorOperations.UpdateAuthor;
 using WebApi.DBOperations;
 using Xunit;
 

@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using FluentValidation;
 
-namespace WebApi.Application.BookOperations.Queries.GetBooksById
+namespace WebApi.BookOperations.GetBooksById
 {
     public class GetBooksByIdValidator : AbstractValidator<GetBooksById>
     {

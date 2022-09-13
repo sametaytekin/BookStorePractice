@@ -4,7 +4,7 @@ using FluentValidation;
 using WebApi.DBOperations;
 using WebApi.Entities;
 
-namespace WebApi.Application.GenreOperations.UpdateGenre
+namespace WebApi.GenreOperations.UpdateGenre
 {
     public class UpdateGenreCommandValidator : AbstractValidator<UpdateGenreCommand>
     {

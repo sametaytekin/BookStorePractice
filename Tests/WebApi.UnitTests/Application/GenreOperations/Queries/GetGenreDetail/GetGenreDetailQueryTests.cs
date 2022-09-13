@@ -2,8 +2,8 @@ using System;
 using AutoMapper;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using WebApi.DBOperations;
+using WebApi.GenreOperations.GetGenreDetail;
 using Xunit;
 
 namespace Application.GenreOperations.Queries

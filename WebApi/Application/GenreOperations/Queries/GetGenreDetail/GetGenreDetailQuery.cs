@@ -4,7 +4,7 @@ using System;
 using AutoMapper;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.GenreOperations.Queries.GetGenreDetail
+namespace WebApi.GenreOperations.GetGenreDetail
 {
     public class GetGenreDetailQuery
     {

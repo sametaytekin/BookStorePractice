@@ -1,12 +1,11 @@
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
-using WebApi.Application.AuthorOperations.Commands.DeleteAuthor;
-using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
-using WebApi.Application.AuthorOperations.Queries.CreateAuthor;
-using WebApi.Application.AuthorOperations.Queries.GetAuthorDetailQuery;
-using WebApi.Application.AuthorOperations.Queries.GetAuthors;
+using WebApi.AuthorOperations.CreateAuthor;
+using WebApi.AuthorOperations.DeleteAuthor;
+using WebApi.AuthorOperations.GetAuthorDetailQuery;
+using WebApi.AuthorOperations.GetAuthors;
+using WebApi.AuthorOperations.UpdateAuthor;
 using WebApi.DBOperations;
 
 namespace WebApi.Controllers

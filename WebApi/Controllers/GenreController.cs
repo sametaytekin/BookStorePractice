@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using FluentValidation;
-using static WebApi.Application.BookOperations.Commands.CreateBookCommand.CreateBookCommand;
 using WebApi.DBOperations;
-using WebApi.Application.GenreOperations.Queries.GetGenres;
-using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
-using WebApi.Application.GenreOperations.CreateGenre;
-using WebApi.Application.GenreOperations.UpdateGenre;
-using WebApi.Application.GenreOperations.DeleteGenre;
+using WebApi.GenreOperations.GetGenres;
+using WebApi.GenreOperations.GetGenreDetail;
+using WebApi.GenreOperations.CreateGenre;
+using WebApi.GenreOperations.UpdateGenre;
+using WebApi.GenreOperations.DeleteGenre;
 
 namespace WebApi.Controllers
 {

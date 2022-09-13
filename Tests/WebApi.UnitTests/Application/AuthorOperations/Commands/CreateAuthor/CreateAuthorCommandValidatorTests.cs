@@ -1,8 +1,7 @@
 using System;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.AuthorOperations.Commands.CreateAuthor;
-using WebApi.Application.AuthorOperations.Queries.CreateAuthor;
+using WebApi.AuthorOperations.CreateAuthor;
 using Xunit;
 
 namespace Application.AuthorOperations.Commands

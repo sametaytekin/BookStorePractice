@@ -3,7 +3,7 @@ using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.AuthorOperations.Commands.UpdateAuthor
+namespace WebApi.AuthorOperations.UpdateAuthor
 {
     public class UpdateAuthorCommand
     {   

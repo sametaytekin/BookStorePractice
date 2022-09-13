@@ -1,7 +1,7 @@
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.BookOperations.Commands.UpdateBook;
-using WebApi.DBOperations;
+using WebApi.BookOperations.UpdateBook;
+using WebApi.BookOperations.UpdateBookValidator;
 using Xunit;
 
 namespace Application.BookOperations.Commands

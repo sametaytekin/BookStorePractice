@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WebApi.Application.GenreOperations.CreateGenre
+namespace WebApi.GenreOperations.CreateGenre
 {
     public class CreateGenreCommandValidator : AbstractValidator<CreateGenreCommand>
     {

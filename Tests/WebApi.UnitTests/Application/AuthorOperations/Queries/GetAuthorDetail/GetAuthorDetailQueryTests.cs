@@ -2,7 +2,7 @@ using System;
 using AutoMapper;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.AuthorOperations.Queries.GetAuthorDetailQuery;
+using WebApi.AuthorOperations.GetAuthorDetailQuery;
 using WebApi.DBOperations;
 using Xunit;
 

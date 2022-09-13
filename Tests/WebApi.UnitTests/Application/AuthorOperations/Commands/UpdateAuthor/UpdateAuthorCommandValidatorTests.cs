@@ -1,7 +1,7 @@
 using System;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.AuthorOperations.Commands.UpdateAuthor;
+using WebApi.AuthorOperations.UpdateAuthor;
 using Xunit;
 
 namespace Application.AuthorOperations.Commands

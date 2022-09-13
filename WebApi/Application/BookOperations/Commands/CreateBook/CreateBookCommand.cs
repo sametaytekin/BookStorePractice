@@ -7,7 +7,7 @@ using WebApi.Common;
 using AutoMapper;
 using WebApi.Entities;
 
-namespace WebApi.Application.BookOperations.Commands.CreateBookCommand
+namespace WebApi.BookOperations.CreateBook
 {
     public class CreateBookCommand{
        private readonly IBookStoreDbContext _dbContext;

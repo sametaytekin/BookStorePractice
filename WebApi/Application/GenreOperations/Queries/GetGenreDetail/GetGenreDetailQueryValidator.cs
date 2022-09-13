@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WebApi.Application.GenreOperations.Queries.GetGenreDetail
+namespace WebApi.GenreOperations.GetGenreDetail
 {
     public class GetGenreDetailQueryValidator: AbstractValidator<GetGenreDetailQuery>
     {

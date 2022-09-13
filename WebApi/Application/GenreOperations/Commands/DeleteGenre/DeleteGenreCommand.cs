@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.GenreOperations.DeleteGenre
+namespace WebApi.GenreOperations.DeleteGenre
 {
     public class DeleteGenreCommand
     {

@@ -1,10 +1,10 @@
 using System;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.BookOperations.Command.CreateBookCommandValidator;
-using WebApi.Application.BookOperations.Commands.CreateBookCommand;
+using WebApi.BookOperations.CreateBook;
+using WebApi.BookOperations.CreateBookCommandValidator;
 using Xunit;
-using static WebApi.Application.BookOperations.Commands.CreateBookCommand.CreateBookCommand;
+using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 
 namespace Application.BookOperations.Commands
 {

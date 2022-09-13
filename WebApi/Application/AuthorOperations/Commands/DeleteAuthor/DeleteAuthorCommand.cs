@@ -4,7 +4,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 
-namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
+namespace WebApi.AuthorOperations.DeleteAuthor
 {
     public class DeleteAuthorCommand
     {

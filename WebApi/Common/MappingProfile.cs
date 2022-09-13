@@ -1,15 +1,15 @@
 using AutoMapper;
-using WebApi.Application.BookOperations.Queries.GetBooksQuery;
-using WebApi.Application.BookOperations.Queries.GetBooksById;
 using WebApi.Entities;
-using static WebApi.Application.BookOperations.Commands.CreateBookCommand.CreateBookCommand;
-using WebApi.Application.GenreOperations.Queries.GetGenres;
-using WebApi.Application.GenreOperations.CreateGenre;
-using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
-using WebApi.Application.AuthorOperations.Queries.GetAuthors;
-using WebApi.Application.AuthorOperations.Queries.CreateAuthor;
-using WebApi.Application.AuthorOperations.Queries.GetAuthorDetailQuery;
 using System.Linq;
+using static WebApi.BookOperations.CreateBook.CreateBookCommand;
+using WebApi.BookOperations.GetBooksById;
+using WebApi.BookOperations.GetBooks;
+using WebApi.AuthorOperations.GetAuthors;
+using WebApi.AuthorOperations.GetAuthorDetailQuery;
+using WebApi.AuthorOperations.CreateAuthor;
+using WebApi.GenreOperations.GetGenres;
+using WebApi.GenreOperations.GetGenreDetail;
+using WebApi.GenreOperations.CreateGenre;
 
 namespace WebApi.Common
 {

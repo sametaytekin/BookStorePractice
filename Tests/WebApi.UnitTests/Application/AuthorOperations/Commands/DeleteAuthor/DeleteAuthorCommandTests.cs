@@ -2,7 +2,7 @@ using System;
 using AutoMapper;
 using FluentAssertions;
 using TestsSetup;
-using WebApi.Application.AuthorOperations.Commands.DeleteAuthor;
+using WebApi.AuthorOperations.DeleteAuthor;
 using WebApi.DBOperations;
 using Xunit;
 

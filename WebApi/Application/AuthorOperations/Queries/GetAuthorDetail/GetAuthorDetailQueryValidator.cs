@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WebApi.Application.AuthorOperations.Queries.GetAuthorDetailQuery
+namespace WebApi.AuthorOperations.GetAuthorDetailQuery
 {
     public class GetAuthorDetailQueryValidator:AbstractValidator<GetAuthorDetailQuery>
     {
