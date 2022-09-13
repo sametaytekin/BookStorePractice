@@ -35,7 +35,6 @@ namespace WebApi.Application.BookOperations.Queries.GetBooksById
             
             return bookById;
 
-
         }
         
     }

@@ -24,7 +24,6 @@ namespace WebApi.Application.BookOperations.Queries.GetBooksQuery
             List<BooksViewModel> viewModelBook = new List<BooksViewModel>();
             viewModelBook = _mapper.Map<List<BooksViewModel>>(bookList);
 
-
             return viewModelBook;
         }
 
