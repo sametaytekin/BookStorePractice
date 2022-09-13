@@ -9,14 +9,17 @@ namespace TestsSetup
         {
             context.Genres.AddRange(
                     new Genre{
-                        Name="Personal Growth"
+                        Name="Personal Growth",
+                        isActive=true
                     },
                     new Genre{
-                        Name="Science Fiction"
+                        Name="Science Fiction",
+                        isActive=true
                     },
 
                     new Genre{
-                        Name="Romance"
+                        Name="Romance",
+                        isActive=true
                     }
                 );
 
