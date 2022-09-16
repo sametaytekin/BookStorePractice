@@ -10,6 +10,7 @@ using WebApi.AuthorOperations.CreateAuthor;
 using WebApi.GenreOperations.GetGenres;
 using WebApi.GenreOperations.GetGenreDetail;
 using WebApi.GenreOperations.CreateGenre;
+using WebApi.UserOperations.CreateUser;
 
 namespace WebApi.Common
 {
@@ -38,6 +39,8 @@ namespace WebApi.Common
             .ForMember(dest=>dest.Books,opt=>opt.MapFrom(src=>src.Books.OrderBy(x=>x.Id).Select(x=>x.Title).ToList<string>()));
             
             CreateMap<CreateAuthorModel,Author>();
+
+            CreateMap<CreateUserModel,User>();
 
 
         }
